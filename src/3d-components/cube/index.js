@@ -1,7 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useScroll, useGLTF, useAnimations } from '@react-three/drei';
 import * as THREE from 'three';
+import useSetColor from './hooks/useSetColor';
+import Page from './components/Page';
 
 import model from '~/src/assets/cube.glb';
 
@@ -10,12 +12,10 @@ const START_POINT = 0.69;
 function Box(props) {
   const { scene, nodes, animations } = useGLTF(model);
   const { actions } = useAnimations(animations, scene);
-  // const cubeRef = useRef(null);
   const scroll = useScroll();
+  const parent = useRef();
 
-  useEffect(() => {
-    nodes['Cube002'].children.map((face) => (face.material.transparent = true));
-  }, []);
+  useSetColor(nodes);
 
   useEffect(() => {
     animations.forEach((animation) => {
@@ -27,10 +27,6 @@ function Box(props) {
     const offset = scroll.range(START_POINT, 0.4);
     const cubeCapTransparencyOffset = scroll.range(START_POINT, 0.2);
     const visibleRange = scroll.range(0.9, 0.1);
-
-    // nodes.forEach((node) => {
-    //   node.children.map((face) => (face.material.opacity = 1 - visibleRange));
-    // });
 
     //set up the opacity for head component
     nodes['Cube002'].children.map(
@@ -49,15 +45,18 @@ function Box(props) {
   });
 
   return (
-    <primitive
-      // ref={cubeRef}
-      onClick={() => {
-        console.log('test');
-      }}
-      scale={[12, 12, 12]}
-      object={scene}
-      {...props}
-    />
+    <group>
+      <primitive
+        ref={parent}
+        onClick={() => {
+          console.log('test');
+        }}
+        scale={[12, 12, 12]}
+        object={scene}
+        {...props}
+      />
+      <Page />
+    </group>
   );
 }
 

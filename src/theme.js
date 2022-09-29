@@ -1,9 +1,13 @@
 const theme = {
   colors: {
-    primary: 'yellow',
-    primaryLight: 'rgba(240,250,0, 0.3)',
-    light: 'white',
+    primary: 'cyan',
+    primaryLight: 'cyan',
+    light: 'cyan',
     dark: 'black',
+    cubeEmissionEdgeColor: { r: 0, g: 1, b: 1 }, // values should be from 0-1
+    cubeEdgeColor: { r: 0, g: 1, b: 1 }, // values should be from 0-1
+    cubeEmissionFaceColor: { r: 0, g: 0, b: 0 }, // values should be from 0-1
+    cubeFaceColor: { r: 0, g: 0, b: 0 },
   },
 };
 

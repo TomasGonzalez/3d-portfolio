@@ -6,9 +6,7 @@ import { useFrame } from '@react-three/fiber';
 
 function ScrollReminderPage() {
   const scroll = useScroll();
-  const [isVisible, setIsVisible] = useState(
-    !localStorage.getItem('show-scroll-reminder-helper')
-  );
+  const [isVisible, setIsVisible] = useState(true);
   const ref = useRef(null);
 
   useFrame(() => {
@@ -18,7 +16,7 @@ function ScrollReminderPage() {
 
     if (isVisible && !scroll.visible(0, 0.02)) {
       setIsVisible(false);
-      localStorage.setItem('show-scroll-reminder-helper', 'false');
+      // localStorage.setItem('show-scroll-reminder-helper', 'false');
     }
   });
 

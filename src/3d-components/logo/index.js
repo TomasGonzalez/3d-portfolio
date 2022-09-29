@@ -26,7 +26,6 @@ const Logo = (props) => {
     subTitleRef.current.material.opacity = 1 - scroll.range(0, 0.08);
   });
 
-  // return <Text3D>test</Text3D>;
   return (
     <Center scale={[20, 20, 20]} position={[90, 0, 30]}>
       <Text3D
@@ -36,7 +35,7 @@ const Logo = (props) => {
         letterSpacing={-0.025}
       >
         {`Tomas Gonzalez`}
-        <Center position={[10, -1, 0]} scale={[0.5, 0.5, 0.5]}>
+        <Center position={[8, -1, 0]} scale={[0.5, 0.5, 0.5]}>
           <Text3D
             ref={subTitleRef}
             font={Fonts}
