@@ -6,7 +6,6 @@ import { useWindowSize } from 'rooks';
 
 import theme from '~/src/theme';
 import NavModal from './NavModal';
-import { isVisible } from '@testing-library/user-event/dist/utils';
 import useStore from '../../context/mainStore';
 import CONFIG from '../../configs';
 

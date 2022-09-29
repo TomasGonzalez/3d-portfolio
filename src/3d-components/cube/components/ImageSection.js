@@ -12,7 +12,7 @@ const ImageSection = ({ imageList }) => {
 
   return (
     <group>
-      {imageList?.map((item, index) => {
+      {imageList?.map((url, index) => {
         const calculateAmountOfRows =
           LEFT_PADDING +
           Math.floor(index / DISTANCE_HORIZONTAL) / DISTANCE_VERTICAL;
@@ -23,11 +23,11 @@ const ImageSection = ({ imageList }) => {
 
         return (
           <Image
-            key={item.image}
+            key={url}
             transparent
             scale={0.15}
             position={[calculateAmountOfRows, calculateColumns, 0.02]}
-            url={item.image}
+            url={url}
           />
         );
       })}

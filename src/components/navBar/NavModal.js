@@ -1,9 +1,12 @@
 import React, { useCallback } from 'react';
 import Modal from 'react-modal';
 import styled from 'styled-components';
-import { isMobile } from 'react-device-detect';
+// import { isMobile } from 'react-device-detect';
 
 import useStore from '~/src/context/mainStore';
+import configs from '../../configs';
+
+const { relevantStops } = configs;
 
 const Button = styled.button`
   display: flex;
@@ -65,17 +68,12 @@ const NavModal = (props) => {
       }}
       {...props}
     >
-      <Button onClick={() => setFloatingCamera(!floatingCamera)}>
+      {/* <Button onClick={() => setFloatingCamera(!floatingCamera)}>
         {isMobile ? 'phone' : 'desktop'}
-      </Button>
-      <Button onClick={() => scrollTo(0)}>Home</Button>
-      <Button onClick={() => scrollTo(0.15)}>Product</Button>
-      <Button onClick={() => scrollTo(0.2407)}>The Club</Button>
-      <Button onClick={() => scrollTo(0.3382)}>Mint!</Button>
-      <Button onClick={() => scrollTo(0.4409)}>Roadmap</Button>
-      <Button onClick={() => scrollTo(0.55)}>Team</Button>
-      <Button onClick={() => scrollTo(0.652)}>End Info</Button>
-      <Button onClick={() => scrollTo(1)}>Island</Button>
+      </Button> */}
+      {relevantStops.map((stop) => (
+        <Button onClick={() => scrollTo(stop.position)}>{stop.name}</Button>
+      ))}
     </Modal>
   );
 };
