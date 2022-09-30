@@ -2,7 +2,10 @@ import React, { useRef } from 'react';
 import { Text3D, Center, useScroll } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
+import configs from '../../configs';
 import Fonts from '~/src/assets/fonts/ibm_plex_mono_regular.json';
+
+const { title, subTitle } = configs;
 
 const Logo = () => {
   const logoModelRef = useRef();
@@ -29,7 +32,7 @@ const Logo = () => {
         lineHeight={0.5}
         letterSpacing={-0.025}
       >
-        {`Tomas Gonzalez`}
+        {title}
         <Center position={[8, -1, 0]} scale={[0.5, 0.5, 0.5]}>
           <Text3D
             ref={subTitleRef}
@@ -37,7 +40,7 @@ const Logo = () => {
             lineHeight={0.5}
             letterSpacing={-0.025}
           >
-            {'Dev portfolio'}
+            {subTitle}
           </Text3D>
         </Center>
         <meshNormalMaterial />

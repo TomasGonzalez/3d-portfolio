@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import StarObject from '../starObject';
 
+import configs from '../../configs';
+
+const { stars } = configs;
+
 const STARS_RADIOUS = 480;
 const MINIMUM_RADIOUS = 1;
-const STARS_AMOUNT = 900;
+const STARS_AMOUNT = stars.dencity || 900;
 
 function getRandomInt(max, min) {
   const plusOrMinus = Math.random() < 0.5 ? -1 : 1;

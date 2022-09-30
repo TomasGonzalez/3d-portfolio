@@ -1,8 +1,12 @@
 import React, { useRef, useState } from 'react';
-import { useScroll } from '@react-three/drei';
+import { useScroll, Billboard, Image } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
+import configs from '../../configs';
+import theme from '~/src/theme';
 
-const MAX_SIZE = 50;
+const { stars } = configs;
+
+const MAX_SIZE = stars.maxSize || 50;
 const MAX_SPEED = 0.01;
 const MAX_EMISSION = 500;
 
@@ -19,13 +23,28 @@ function StarsField(props) {
     ref.current.rotation.x += starSpeed;
   });
 
+  if (stars.url)
+    return (
+      <Billboard>
+        <Image
+          {...props}
+          ref={ref}
+          scale={[starSize, starSize, starSize]}
+          transparent
+          color={theme.colors.stars}
+          emissive={theme.colors.starsEmission}
+          url={'icons/three-js-logo.png'}
+        />
+      </Billboard>
+    );
+
   return (
     <mesh {...props} ref={ref} scale={[starSize, starSize, starSize]}>
       <octahedronGeometry args={[0.1]} />
       <meshStandardMaterial
-        color={'white'}
-        emissive={'orange'}
-        emissiveIntensity={10}
+        color={theme.colors.stars}
+        emissive={theme.colors.starsEmission}
+        emissiveIntensity={stars.emissionIntencity}
       />
     </mesh>
   );

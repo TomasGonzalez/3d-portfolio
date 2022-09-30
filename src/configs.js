@@ -7,6 +7,14 @@ import {
 } from './constants/pageData';
 
 const configs = {
+  title: 'Tomas Gonzalez',
+  subTitle: 'Dev portfolio.',
+  stars: {
+    maxSize: 20,
+    emissionIntencity: 20,
+    // url: 'icons/three-js-logo.png',
+    dencity: 900,
+  },
   navTitle: 'Tomas Gonzalez portfolio.',
   relevantStops: STOPS,
   pages: [
