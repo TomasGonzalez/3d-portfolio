@@ -1,6 +1,9 @@
 import { Image } from '@react-three/drei';
+import useStore from '../../../context/mainStore';
 
 const ImageSection = ({ imageList }) => {
+  const { setFloatingCamera } = useStore((state) => state);
+
   if (!imageList) {
     return null;
   }
@@ -17,7 +20,11 @@ const ImageSection = ({ imageList }) => {
 
         return (
           <Image
-            onClick={() => item.websiteURL && window.open(item.websiteURL)}
+            onClick={() => {
+              if (item.websiteURL) {
+                return setFloatingCamera(true);
+              }
+            }}
             key={item.url}
             transparent
             scale={scale}

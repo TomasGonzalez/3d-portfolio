@@ -7,10 +7,15 @@ import {
 } from '@react-three/postprocessing';
 
 function Bloom({ children }) {
-  const { gl, camera } = useThree();
-  const scroll = useScroll();
+  const { gl, size } = useThree();
+  const [scene, setScene] = useState();
   const composer = useRef();
-  const uBloom = useRef();
+  const scroll = useScroll();
+
+  useEffect(
+    () => void scene && composer.current.setSize(size.width, size.height),
+    [size, scene]
+  );
 
   useEffect(() => {
     gl.toneMappingExposure = 0.5;
@@ -27,12 +32,12 @@ function Bloom({ children }) {
 
   return (
     <EffectComposer ref={composer} args={[gl]}>
+      <scene setScene={setScene}>{children}</scene>
       <UnrealBloomPass
         luminanceThreshold={0}
         luminanceSmoothing={0.2}
         height={300}
       />
-      {children}
     </EffectComposer>
   );
 }

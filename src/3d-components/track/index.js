@@ -38,9 +38,8 @@ function Knot() {
   }, [scroll.el, setScrollElement]);
 
   useEffect(() => {
-    return floatingCamera
-      ? setTranslateToCamera(true)
-      : setTimeout(() => setTranslateToCamera(false), 1200);
+    if (floatingCamera) setTranslateToCamera(true);
+    else setTimeout(() => setTranslateToCamera(false), 1200);
   }, [floatingCamera]);
 
   let prevOffset = scroll.offset;

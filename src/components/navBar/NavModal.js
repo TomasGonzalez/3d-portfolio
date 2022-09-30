@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import Modal from 'react-modal';
 import styled from 'styled-components';
-// import { isMobile } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
 
 import useStore from '~/src/context/mainStore';
 import configs from '../../configs';
@@ -68,9 +68,9 @@ const NavModal = (props) => {
       }}
       {...props}
     >
-      {/* <Button onClick={() => setFloatingCamera(!floatingCamera)}>
+      <Button onClick={() => setFloatingCamera(!floatingCamera)}>
         {isMobile ? 'phone' : 'desktop'}
-      </Button> */}
+      </Button>
       {relevantStops.map((stop) => (
         <Button onClick={() => scrollTo(stop.position)}>{stop.name}</Button>
       ))}

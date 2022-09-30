@@ -16,22 +16,15 @@ const MainCamera = () => {
   }, [camref, setCameraRef]);
 
   useEffect(() => {
-    if (floatingCamera) {
-      camref.current.fov = 100;
-      camref.current.updateProjectionMatrix();
-    }
-
-    if (!floatingCamera) {
-      camref.current.fov = 65;
-      camref.current.updateProjectionMatrix();
-    }
+    camref.current.fov = floatingCamera ? 100 : 65;
+    camref.current.updateProjectionMatrix();
   }, [floatingCamera]);
 
   useFrame(() => {
     if (camref.current && floatingCamera) {
       const target = new THREE.Vector3(0, 0, 0);
       camref.current.translateOnAxis(camref.current.worldToLocal(target), 0.1);
-      camref.current.lookAt(target);
+      // camref.current.lookAt(target);
     }
   });
 
