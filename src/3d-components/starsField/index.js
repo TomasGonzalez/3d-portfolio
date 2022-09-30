@@ -3,7 +3,7 @@ import StarObject from '../starObject';
 
 const STARS_RADIOUS = 480;
 const MINIMUM_RADIOUS = 1;
-const STARS_AMOUNT = 1200;
+const STARS_AMOUNT = 900;
 
 function getRandomInt(max, min) {
   const plusOrMinus = Math.random() < 0.5 ? -1 : 1;

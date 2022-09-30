@@ -1,33 +1,28 @@
 import { Image } from '@react-three/drei';
 
-const DISTANCE_VERTICAL = 4;
-const DISTANCE_HORIZONTAL = 3;
-const LEFT_PADDING = -0.4;
-const TOP_PADDING = 0.26;
-
 const ImageSection = ({ imageList }) => {
   if (!imageList) {
     return null;
   }
 
+  const { rows, separation, scale, leftPadding, topPadding, items } = imageList;
+
   return (
     <group>
-      {imageList?.map((url, index) => {
+      {items?.map((item, index) => {
         const calculateAmountOfRows =
-          LEFT_PADDING +
-          Math.floor(index / DISTANCE_HORIZONTAL) / DISTANCE_VERTICAL;
+          leftPadding + Math.floor(index / rows) / separation;
         const calculateColumns =
-          TOP_PADDING +
-          Math.floor(index / DISTANCE_HORIZONTAL) -
-          index / DISTANCE_HORIZONTAL;
+          topPadding + Math.floor(index / rows) - index / rows;
 
         return (
           <Image
-            key={url}
+            onClick={() => item.websiteURL && window.open(item.websiteURL)}
+            key={item.url}
             transparent
-            scale={0.15}
+            scale={scale}
             position={[calculateAmountOfRows, calculateColumns, 0.02]}
-            url={url}
+            url={item.url}
           />
         );
       })}

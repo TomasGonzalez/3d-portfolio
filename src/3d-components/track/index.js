@@ -9,6 +9,8 @@ import calculateCameraRotation from '../../utils/calcualteCameraRotation';
 //TODO: Instead of getting the reference of the camera and calculating it's position/rotation here,
 //get the referance of the track and calculate position/rotation inside of the camera component
 
+//I forgot how this works, touch at your own risk. If anyone has a good way to implement smooth stop points in the track please let me know
+
 const SLOWDOWN_FACTOR = 7; // the lower the slower it goes
 const STOP_POINTS = [0.114, 0.211, 0.3015, 0.412, 0.5143, 0.625]; // they have to be separated by one SMOOTH_AMOUNT unit for example if smooth amount is 0.1 and the first stop point is 0.1 the second o stop_point has to be > 0.2
 const SMOOTH_AMOUNT = 0.1; // how much time the smooth takes

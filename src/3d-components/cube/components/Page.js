@@ -17,11 +17,14 @@ function Face({ rotation, position, displayAt, ...page }) {
   const faceRef = useRef();
 
   useFrame(() => {
-    console.log(scroll.offset, 'this is offset');
     if (displayAt) {
-      const offset = 0.03;
       const newScale =
-        page.scale * scroll.curve(displayAt - offset, displayAt - offset);
+        page.scale *
+        scroll.curve(
+          displayAt.displayPosition + displayAt.displayPositionOffset,
+          displayAt.displayPosition + displayAt.displayPositionOffsetEnd
+        );
+
       faceRef.current.scale.x = newScale;
       faceRef.current.scale.z = newScale;
       faceRef.current.scale.y = newScale;
@@ -29,13 +32,7 @@ function Face({ rotation, position, displayAt, ...page }) {
   });
 
   return (
-    <mesh
-      ref={faceRef}
-      className='content'
-      scale={15}
-      rotation={rotation}
-      position={position}
-    >
+    <mesh ref={faceRef} rotation={rotation} position={position}>
       <Text position={[0, 0.5, 0.01]} color={theme.colors.light}>
         {page.title}
       </Text>
