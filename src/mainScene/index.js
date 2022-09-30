@@ -7,6 +7,7 @@ import {
   OrbitControls,
   Scroll,
   Float,
+  Html,
 } from '@react-three/drei';
 
 import Bloom from '~/src/3d-components/Bloom';

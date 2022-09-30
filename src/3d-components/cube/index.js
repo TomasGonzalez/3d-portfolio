@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { useScroll, useGLTF, useAnimations } from '@react-three/drei';
+import { Html, useScroll, useGLTF, useAnimations } from '@react-three/drei';
 import * as THREE from 'three';
 import useSetColor from './hooks/useSetColor';
 import Page from './components/Page';
@@ -55,6 +55,16 @@ function Box(props) {
         object={scene}
         {...props}
       />
+      <Html
+        as='div'
+        transform
+        position={[0, 0.05, -0.09]}
+        style={{
+          height: 1000,
+          width: 1000,
+          backgroundColor: 'red',
+        }}
+      ></Html>
       <Page />
     </group>
   );
