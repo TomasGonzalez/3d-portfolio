@@ -54,6 +54,7 @@
   "devDependencies": {
     "babel-plugin-root-import": "^6.6.0",
     "customize-cra": "^1.0.0",
+    "gh-pages": "^4.0.0",
     "react-app-rewired": "^2.2.1",
     "sass": "^1.55.0"
   }
