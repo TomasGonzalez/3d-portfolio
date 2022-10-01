@@ -33,15 +33,18 @@ export const EXPERIENCE = {
     },
     {
       url: 'websites-preview/cs2.png',
-      websiteURL: 'https://tomasgonzalez.github.io/cs.html', //optional open url in new tab
+      websiteURL:
+        'https://633880ea5adf252405f33fce--capable-buttercream-d8879f.netlify.app/cs.html', //optional open url in new tab
     },
     {
       url: 'websites-preview/knack-page.png',
-      websiteURL: 'https://tomasgonzalez.github.io/knack.html',
+      websiteURL:
+        'https://633880ea5adf252405f33fce--capable-buttercream-d8879f.netlify.app/knack.html',
     },
     {
       url: 'websites-preview/magic.png',
-      websiteURL: 'https://tomasgonzalez.github.io/magic-app.html',
+      websiteURL:
+        'https://633880ea5adf252405f33fce--capable-buttercream-d8879f.netlify.app/magic-app.html',
     },
   ],
 };
@@ -82,7 +85,7 @@ export const STOPS = [
     displayPosition: 0.2007,
     displayPositionOffset: -0.03,
     displayPositionOffsetEnd: -0.07,
-    name: 'Previous Work',
+    name: 'Experience',
   },
   {
     position: 0.2982,

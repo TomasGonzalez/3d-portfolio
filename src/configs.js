@@ -34,7 +34,7 @@ const configs = {
     },
     {
       scale: 15,
-      displayAt: displayAt('Previous Work'),
+      displayAt: displayAt('Experience'),
       rotation: [0, -Math.PI / 2, 0],
       position: [-PAGE_DEPH_MARGIN, 0, 0],
       title: 'Experience',
