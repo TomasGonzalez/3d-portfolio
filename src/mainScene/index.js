@@ -39,8 +39,6 @@ function MainScene() {
           <ScrollReminderPage />
         </Scroll>
         <Bloom>
-          <ambientLight />
-          <pointLight position={[-858, 550, 0]} />
           <Stars />
           {floatingCamera &&
             (isMobile ? <DeviceOrientationControls /> : <OrbitControls />)}

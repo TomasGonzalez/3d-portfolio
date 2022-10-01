@@ -2,7 +2,6 @@
   "name": "3d-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tomasgonzalez.github.io/3d-portfolio/build/",
   "dependencies": {
     "@react-three/drei": "^9.32.3",
     "@react-three/fiber": "^8.8.6",
