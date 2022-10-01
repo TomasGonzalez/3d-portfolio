@@ -74,10 +74,10 @@ const configs = {
     },
     {
       scale: 15,
-      displayAt: displayAt('Personal Proyects'),
+      displayAt: displayAt('Personal Projects'),
       rotation: [Math.PI / 2, 0, 0],
       position: [0, -PAGE_DEPH_MARGIN, 0],
-      title: 'Personal Proyects',
+      title: 'Personal Projects',
       footer: '(And also this web-app)',
       imageList: {
         rows: 2,
