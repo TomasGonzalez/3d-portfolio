@@ -34,7 +34,7 @@ function MainScene() {
         overflow: 'hidden',
       }}
     >
-      <ScrollControls damping={3} distance={1} pages={8}>
+      <ScrollControls damping={8} distance={1} pages={8}>
         <Scroll html>
           <ScrollReminderPage />
         </Scroll>
