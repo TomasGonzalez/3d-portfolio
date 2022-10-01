@@ -28,7 +28,7 @@ const configs = {
       infos: [
         '* I’m a creator, a curious mind who finds pleasure in learning and understanding how things work.',
         '* My journey as a software developer started when I was a just a kid trying to figure out how video games where made.',
-        '* I started my career as a Front end developer around 6 years ago in 2017, and since then I have helped many startup companies and non-profit organizations to develop quality products.',
+        '* I started my career as a front-end developer around 6 years ago in 2017, and since then I have helped many startup companies and non-profit organizations to develop quality products.',
         '* I have a wide range of skills, of which I can say that I’ve mastered many.',
       ],
     },
