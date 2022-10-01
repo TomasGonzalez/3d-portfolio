@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Text } from '@react-three/drei';
 import { useScroll } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
+import useStore from '~/src/context/mainStore';
 
 import Footer from './Footer';
 import ImageSection from './ImageSection';
@@ -44,6 +45,7 @@ function Face({ rotation, position, displayAt, ...page }) {
 }
 
 function Page() {
+  const { webViewer } = useStore((state) => state);
   return (
     <group>
       {pages.map((page) => {

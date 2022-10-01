@@ -65,15 +65,13 @@ const NavBar = () => {
       transitionLeave={true}
     >
       <NavModal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} />
-      {isNavVisible && (
-        <MainContainer windowWidth={windowWidth}>
-          <div style={{ width: 75 }} />
-          <div>{navTitle}</div>
-          <MenuButton onClick={() => setIsOpen(true)}>
-            <AiOutlineMenu color={theme.colors.primary} size={30} />
-          </MenuButton>
-        </MainContainer>
-      )}
+      <MainContainer windowWidth={windowWidth}>
+        <div style={{ width: 75 }} />
+        <div>{navTitle}</div>
+        <MenuButton onClick={() => setIsOpen(true)}>
+          <AiOutlineMenu color={theme.colors.primary} size={30} />
+        </MenuButton>
+      </MainContainer>
     </CSSTransitionGroup>
   );
 };

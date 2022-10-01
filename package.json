@@ -30,7 +30,8 @@
     "build": "react-app-rewired build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && firebase deploy"
+    "deploy": "yarn build && firebase deploy",
+    "postinstall": "patch-package"
   },
   "eslintConfig": {
     "extends": [

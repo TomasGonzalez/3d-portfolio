@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Html, useScroll, useGLTF, useAnimations } from '@react-three/drei';
+import { useScroll, useGLTF, useAnimations } from '@react-three/drei';
 import * as THREE from 'three';
+
+import useStore from '../../context/mainStore';
 import useSetColor from './hooks/useSetColor';
 import Page from './components/Page';
 
@@ -10,6 +12,7 @@ import model from '~/src/assets/cube.glb';
 const START_POINT = 0.69;
 
 function Box(props) {
+  const { setFloatingCamera } = useStore((store) => store);
   const { scene, nodes, animations } = useGLTF(model);
   const { actions } = useAnimations(animations, scene);
   const scroll = useScroll();
@@ -49,22 +52,12 @@ function Box(props) {
       <primitive
         ref={parent}
         onClick={() => {
-          console.log('test');
+          setFloatingCamera(false);
         }}
         scale={[12, 12, 12]}
         object={scene}
         {...props}
       />
-      <Html
-        as='div'
-        transform
-        position={[0, 0.05, -0.09]}
-        style={{
-          height: 1000,
-          width: 1000,
-          backgroundColor: 'red',
-        }}
-      ></Html>
       <Page />
     </group>
   );

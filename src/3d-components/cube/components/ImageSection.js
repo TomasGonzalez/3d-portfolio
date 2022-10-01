@@ -1,14 +1,17 @@
-import { Image } from '@react-three/drei';
+import { useState } from 'react';
+import { Image, Html } from '@react-three/drei';
 import useStore from '../../../context/mainStore';
 
 const ImageSection = ({ imageList }) => {
-  const { setFloatingCamera } = useStore((state) => state);
+  const [displayWebSite, setDisplayWebsite] = useState(null);
+  const { setFloatingCamera, floatingCamera } = useStore((state) => state);
 
   if (!imageList) {
     return null;
   }
 
-  const { rows, separation, scale, leftPadding, topPadding, items } = imageList;
+  const { rows, separation, scale, leftPadding, topPadding, items, webViewer } =
+    imageList;
 
   return (
     <group>
@@ -21,8 +24,13 @@ const ImageSection = ({ imageList }) => {
         return (
           <Image
             onClick={() => {
+              console.log(item);
               if (item.websiteURL) {
-                return setFloatingCamera(true);
+                if (webViewer) {
+                  setDisplayWebsite(item.websiteURL);
+                  return setFloatingCamera(true);
+                }
+                return window.open(item.websiteURL);
               }
             }}
             key={item.url}
@@ -33,6 +41,25 @@ const ImageSection = ({ imageList }) => {
           />
         );
       })}
+      {floatingCamera && webViewer && displayWebSite && (
+        <Html
+          as='div'
+          transform
+          rotation={webViewer.rotation}
+          position={webViewer.position}
+          style={{
+            height: webViewer.height,
+            width: webViewer.width,
+            backgroundColor: 'red',
+          }}
+        >
+          <iframe
+            title={'Description'}
+            style={{ height: '100%', width: '100%' }}
+            src={displayWebSite}
+          />
+        </Html>
+      )}
     </group>
   );
 };

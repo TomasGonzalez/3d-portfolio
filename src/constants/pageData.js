@@ -15,15 +15,34 @@ export const EXPERIENCE = {
   leftPadding: -0.32,
   topPadding: 0.22,
   scale: 0.2,
+  //optionally show the websiteURL inside of the cube in an Iframe
+  webViewer: {
+    position: [0, 0, -15],
+    rotation: [Math.PI, Math.PI, Math.PI],
+    height: 720,
+    width: 1024,
+  },
   items: [
     {
-      url: 'websites-preview/cs2.png',
-      websiteURL: 'https://tomasgonzalez.github.io/cs.html',
+      url: 'websites-preview/optic-logo.png',
+      websiteURL: 'https://optic.id/',
     },
-    { url: 'websites-preview/good-dollar.jpeg', websiteURL: null },
-    { url: 'websites-preview/knack-page.png', websiteURL: null },
-    { url: 'websites-preview/magic.png', websiteURL: null },
-    { url: 'websites-preview/optic-logo.png', websiteURL: null },
+    {
+      url: 'websites-preview/good-dollar.jpeg',
+      websiteURL: 'https://www.gooddollar.org/',
+    },
+    {
+      url: 'websites-preview/cs2.png',
+      websiteURL: 'https://tomasgonzalez.github.io/cs.html', //optional open url in new tab
+    },
+    {
+      url: 'websites-preview/knack-page.png',
+      websiteURL: 'https://tomasgonzalez.github.io/knack.html',
+    },
+    {
+      url: 'websites-preview/magic.png',
+      websiteURL: 'https://tomasgonzalez.github.io/magic-app.html',
+    },
   ],
 };
 
@@ -63,14 +82,14 @@ export const STOPS = [
     displayPosition: 0.2007,
     displayPositionOffset: -0.03,
     displayPositionOffsetEnd: -0.07,
-    name: 'Skills',
+    name: 'Previous Work',
   },
   {
     position: 0.3382,
     displayPosition: 0.232,
     displayPositionOffset: 0.05,
     displayPositionOffsetEnd: -0.12,
-    name: 'Previous Work',
+    name: 'Skills',
   },
   {
     position: 0.4409,

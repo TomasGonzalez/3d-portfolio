@@ -12,6 +12,7 @@ const configs = {
   stars: {
     maxSize: 20,
     emissionIntencity: 20,
+    //optionally stars can be an image
     // url: 'icons/three-js-logo.png',
     dencity: 900,
   },
@@ -33,21 +34,21 @@ const configs = {
     },
     {
       scale: 15,
-      displayAt: displayAt('Skills'),
+      displayAt: displayAt('Previous Work'),
       rotation: [0, -Math.PI / 2, 0],
       position: [-PAGE_DEPH_MARGIN, 0, 0],
-      title: 'Skills',
-      footer: 'And more...',
-      imageList: SKILLS_LIST,
-    },
-    {
-      scale: 15,
-      displayAt: displayAt('Previous Work'),
-      rotation: [-Math.PI / 2, 0, -Math.PI / 2],
-      position: [0, PAGE_DEPH_MARGIN, 0],
       title: 'Experience',
       imageList: EXPERIENCE,
       footer: 'You can click the icons to find out more.',
+    },
+    {
+      scale: 15,
+      displayAt: displayAt('Skills'),
+      rotation: [-Math.PI / 2, 0, -Math.PI / 2],
+      position: [0, PAGE_DEPH_MARGIN, 0],
+      title: 'Skills',
+      footer: 'And more...',
+      imageList: SKILLS_LIST,
     },
     {
       scale: 15,
