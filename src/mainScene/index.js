@@ -14,6 +14,7 @@ import useStore from '../context/mainStore';
 import MainCamera from './Camera';
 import { Cube, Track, StarsField as Stars, Logo } from '../3d-components';
 import ScrollReminderPage from '../components/scrollReminderPage';
+import Hologram from '../3d-components/hologram';
 
 function MainScene() {
   const floatingCamera = useStore((state) => state.floatingCamera);
@@ -48,6 +49,7 @@ function MainScene() {
           <Suspense fallback={null}>
             <Float scale={currentScale}>
               <Logo />
+              <Hologram />
               <Cube position={[0, 0, 0]} />
             </Float>
           </Suspense>

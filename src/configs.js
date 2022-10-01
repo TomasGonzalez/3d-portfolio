@@ -11,7 +11,7 @@ const configs = {
   subTitle: 'Dev portfolio.',
   stars: {
     maxSize: 20,
-    emissionIntencity: 20,
+    emissionIntencity: 40,
     //optionally stars can be an image
     // url: 'icons/three-js-logo.png',
     dencity: 900,
@@ -56,9 +56,21 @@ const configs = {
       rotation: [0, 0, 0],
       position: [0, 0, PAGE_DEPH_MARGIN],
       title: 'Here is my CV!',
-      infos: [
-        'I’m a creator, a curious mind who finds pleasure in learning and understanding how things work.',
-      ],
+      footer: 'Click the icon above to view!',
+      imageList: {
+        rows: 1,
+        separation: 3,
+        leftPadding: 0,
+        topPadding: 0,
+        scale: 0.8,
+        items: [
+          {
+            url: 'icons/resume.png',
+            websiteURL:
+              'https://docs.google.com/document/d/1GavjczDh4Y5-WrPj81WeL81IxDny1qm51Z0vvG0BVdY/edit?usp=sharing',
+          },
+        ],
+      },
     },
     {
       scale: 15,
@@ -66,9 +78,41 @@ const configs = {
       rotation: [Math.PI / 2, 0, 0],
       position: [0, -PAGE_DEPH_MARGIN, 0],
       title: 'Personal Proyects',
-      infos: [
-        'I’m a creator, a curious mind who finds pleasure in learning and understanding how things work.',
-      ],
+      footer: '(And also this web-app)',
+      imageList: {
+        rows: 2,
+        separation: 2.5,
+        leftPadding: -0.4,
+        topPadding: 0.2,
+        scale: 0.3,
+        items: [
+          {
+            url: 'websites-preview/nft-place-logo.png',
+            websiteURL: 'https://nft-place.xyz/',
+          },
+          {
+            url: 'websites-preview/snow-hero.png',
+            websiteURL: 'https://powtom48.itch.io/snow-the-hero',
+          },
+          {
+            url: 'websites-preview/minecraft-in-js.png',
+            websiteURL:
+              'https://www.youtube.com/watch?v=yOUQquusyiY&t=123s&ab_channel=tomugon',
+          },
+          {
+            url: 'websites-preview/fish-chopter.png',
+            websiteURL: 'https://powtom48.itch.io/fishcopter',
+          },
+          {
+            url: 'websites-preview/odd-clowns.png',
+            websiteURL: 'https://oddclowns.com/',
+          },
+          {
+            url: 'websites-preview/island-ai.png',
+            websiteURL: 'https://www.instagram.com/island.ai/',
+          },
+        ],
+      },
     },
     {
       scale: 15,
@@ -76,9 +120,33 @@ const configs = {
       rotation: [0, Math.PI / 2, 0],
       position: [PAGE_DEPH_MARGIN, 0, 0],
       title: 'You can find me in:',
-      infos: [
-        'I’m a creator, a curious mind who finds pleasure in learning and understanding how things work.',
-      ],
+      footer: 'Almost done but keep scrolling :)',
+      imageList: {
+        rows: 2,
+        separation: 1.8,
+        leftPadding: -0.25,
+        topPadding: 0.2,
+        scale: 0.3,
+        items: [
+          {
+            url: 'icons/twitter.png',
+            websiteURL: 'https://nft-place.xyz/',
+          },
+          {
+            url: 'icons/linkedin.png',
+            websiteURL:
+              'https://www.youtube.com/watch?v=yOUQquusyiY&t=123s&ab_channel=tomugon',
+          },
+          {
+            url: 'icons/github.png',
+            websiteURL: 'https://powtom48.itch.io/fishcopter',
+          },
+          {
+            url: 'icons/email.png',
+            websiteURL: 'mailto:tomasgp14@gmail.com',
+          },
+        ],
+      },
     },
   ],
 };
