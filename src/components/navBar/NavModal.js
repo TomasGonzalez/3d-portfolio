@@ -68,9 +68,9 @@ const NavModal = (props) => {
       }}
       {...props}
     >
-      <Button onClick={() => setFloatingCamera(!floatingCamera)}>
+      {/* <Button onClick={() => setFloatingCamera(!floatingCamera)}>
         {isMobile ? 'phone' : 'desktop'}
-      </Button>
+      </Button> */}
       {relevantStops.map((stop) => (
         <Button onClick={() => scrollTo(stop.position)}>{stop.name}</Button>
       ))}

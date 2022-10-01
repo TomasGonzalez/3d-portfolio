@@ -47,15 +47,33 @@ const ImageSection = ({ imageList }) => {
           transform
           rotation={webViewer.rotation}
           position={webViewer.position}
+          zIndexRange={[0, 10]}
           style={{
             height: webViewer.height,
             width: webViewer.width,
-            backgroundColor: 'red',
+            backgroundColor: 'gray',
           }}
         >
+          <div
+            style={{
+              position: 'absolute',
+              zIndex: 0,
+              top: '50%',
+              left: '50%',
+              fontSize: 24,
+              fontWeight: 'bold',
+            }}
+          >
+            Loading...
+          </div>
           <iframe
             title={'Description'}
-            style={{ height: '100%', width: '100%' }}
+            style={{
+              height: '100%',
+              width: '100%',
+              zIndex: 100,
+              position: 'absolute',
+            }}
             src={displayWebSite}
           />
         </Html>

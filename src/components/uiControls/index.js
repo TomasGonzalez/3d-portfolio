@@ -56,7 +56,7 @@ const MainContainer = styled.div`
   position: fixed;
   width: ${(props) => props.windowWidth - 30}px;
   height: 50px;
-  z-index: 19999;
+  z-index: 99999;
   border: 10px solid;
   border-image-slice: 1;
   border-width: 1px;
