@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.967321b4.css",
-    "main.js": "./static/js/main.72ab01c2.js",
+    "main.js": "./static/js/main.af2a651b.js",
     "static/js/27.9f37e83d.chunk.js": "./static/js/27.9f37e83d.chunk.js",
     "static/media/alpha-map.png": "./static/media/alpha-map.d0ab86baef65d5137043.png",
     "static/media/cube.glb": "./static/media/cube.2cd1d417c0994b805dc7.glb",
@@ -9,6 +9,6 @@
   },
   "entrypoints": [
     "static/css/main.967321b4.css",
-    "static/js/main.72ab01c2.js"
+    "static/js/main.af2a651b.js"
   ]
 }
