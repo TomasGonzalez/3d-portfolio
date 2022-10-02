@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { Image, Html } from '@react-three/drei';
 import useStore from '../../../context/mainStore';
@@ -24,7 +25,6 @@ const ImageSection = ({ imageList }) => {
         return (
           <Image
             onClick={() => {
-              console.log(item);
               if (item.websiteURL) {
                 if (webViewer) {
                   setDisplayWebsite(item.websiteURL);

@@ -35,8 +35,8 @@ function Bloom({ children }) {
       <scene setScene={setScene}>{children}</scene>
       <UnrealBloomPass
         luminanceThreshold={0}
-        luminanceSmoothing={0.2}
-        height={300}
+        luminanceSmoothing={0}
+        height={700}
       />
     </EffectComposer>
   );

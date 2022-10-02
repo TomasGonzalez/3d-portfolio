@@ -26,7 +26,7 @@ const configs = {
       displayAt: displayAt('About'),
       title: 'Who Am I?',
       infos: [
-        '* I’m a creator, a curious mind who finds pleasure in learning and understanding how things work.',
+        "* I'm a maker, a curious thinker who enjoys learning and comprehending how things function.",
         '* My journey as a software developer started when I was a just a kid trying to figure out how video games where made.',
         '* I started my career as a front-end developer around 6 years ago in 2017, and since then I have helped many startup companies and non-profit organizations to develop quality products.',
         '* I have a wide range of skills, of which I can say that I’ve mastered many.',
@@ -67,7 +67,7 @@ const configs = {
           {
             url: 'icons/resume.png',
             websiteURL:
-              'https://docs.google.com/document/d/1GavjczDh4Y5-WrPj81WeL81IxDny1qm51Z0vvG0BVdY/edit?usp=sharing',
+              'https://docs.google.com/document/d/1wKGkXHhd7q5v3AOGPMK6Gtehpp_Tkp90BvUufUqQIRc/edit?usp=sharing',
           },
         ],
       },
@@ -130,16 +130,16 @@ const configs = {
         items: [
           {
             url: 'icons/twitter.png',
-            websiteURL: 'https://nft-place.xyz/',
+            websiteURL: 'https://twitter.com/kiter_js',
           },
           {
             url: 'icons/linkedin.png',
             websiteURL:
-              'https://www.youtube.com/watch?v=yOUQquusyiY&t=123s&ab_channel=tomugon',
+              'https://www.linkedin.com/in/tomas-gonzalez-perez-8784a2133/',
           },
           {
             url: 'icons/github.png',
-            websiteURL: 'https://powtom48.itch.io/fishcopter',
+            websiteURL: 'https://github.com/TomasGonzalez',
           },
           {
             url: 'icons/email.png',
