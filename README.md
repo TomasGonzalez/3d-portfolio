@@ -26,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.
 You may also see any lint errors in the console.
 
-## Modify the template to your tasting.
+## Modify the template to your taste.
 
 There is no codeing required to configure the pages of the portfolio. 
 All the settings that you will ever need to touch are set inside the 
