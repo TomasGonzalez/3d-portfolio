@@ -7,6 +7,7 @@ import {
   OrbitControls,
   Scroll,
   Float,
+  Text,
 } from '@react-three/drei';
 
 import Bloom from '~/src/3d-components/Bloom';
@@ -44,7 +45,16 @@ function MainScene() {
             (isMobile ? <DeviceOrientationControls /> : <OrbitControls />)}
           <Track />
           <MainCamera />
-          <Suspense fallback={null}>
+          <Suspense
+            fallback={
+              <Text
+                fontSize={24}
+                rotation={[Math.PI / 0.8, Math.PI / 0.57, Math.PI / 0.845]}
+              >
+                Loading...
+              </Text>
+            }
+          >
             <Float scale={currentScale}>
               <Logo />
               <Hologram />
