@@ -53,7 +53,7 @@ After that run:
 
 ### `yarn deploy`
 
-And thats It! It will automatically deploy to `https://{username}.github.io/{repo-name},`
+And thats It! It will automatically deploy to `https://{username}.github.io/{repo-name}`
 
 # More info
 
