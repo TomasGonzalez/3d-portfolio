@@ -6,27 +6,36 @@ It is built using threejs, react-three-fiber, and @three-fiber/drei.
 
 Created by Tomas Gonzalez.
 
-## Get started!
+# Get started!
+
+## First
 
 Start by cloning this repository and navigating into the root directory.
 
+## Install the dependencies with: 
+
+### `yarn`
+
+## Then start the development server with:
+
 ### `yarn start`
 
-Runs the app in the development mode.\
+This runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
+The page will reload when you make changes.
 You may also see any lint errors in the console.
 
-### `yarn build`
+## Modify the template to your tasting.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+There is no code required to configure the pages of the portfolio. 
+All the settings that you will ever need to touch are set inside the 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `src/configs.js`, `./constants/pageData.js`, and `src/theme.js`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Video tutorial:
+
+comming sooon: I'll make a video explaining this settings more in detail 
 
 ## Deploy to github pages
 
@@ -38,5 +47,4 @@ After that run:
 
 ### `yarn deploy`
 
-Builds and deploys the app for production, this proyect deployment comes already configured with hg-pages, 
-It will automatically deploy to `https://{username}.github.io/{repo-name},`
+And thats It! It will automatically deploy to `https://{username}.github.io/{repo-name},`
