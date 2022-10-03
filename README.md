@@ -2,7 +2,7 @@
 
 It is a highly customizable dev portfolio template that features astonishing 3D graphics by taking advantage of webGL.
 
-It is built using threejs, react-three-fiber, and @three-fiber/drei.
+It is built using [threejs](https://github.com/mrdoob/three.js), [react-three-fiber](https://github.com/pmndrs/react-three-fiber), and [@react-three/drei](https://github.com/pmndrs/drei).
 
 Created by Tomas Gonzalez.
 
