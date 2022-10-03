@@ -1,6 +1,6 @@
 # What is 3d-portfolio?
 
-3d-porfolio is a higlhy customizable dev portfolio that features astonishing 3D graphics by taking advantage of webGL.
+It is a highly customizable dev portfolio template that features astonishing 3D graphics by taking advantage of webGL.
 
 It is built using threejs, react-three-fiber, and @three-fiber/drei.
 
