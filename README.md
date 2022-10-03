@@ -10,8 +10,7 @@ Created by Tomas Gonzalez.
 
 ## First
 
-Start by `forking` this repository,
-than clone your forked copy and navigate to the root directory.
+Start by `forking` this repository, then clone your forked copy and navigate to the root directory.
 
 ## Install the dependencies with: 
 
