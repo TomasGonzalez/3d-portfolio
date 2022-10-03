@@ -31,7 +31,7 @@ You may also see any lint errors in the console.
 There is no code required to configure the pages of the portfolio. 
 All the settings that you will ever need to touch are set inside the 
 
-### `src/configs.js`, `./constants/pageData.js`, and `src/theme.js`
+`src/configs.js`, `./constants/pageData.js`, and `src/theme.js`
 
 ## Video tutorial:
 
