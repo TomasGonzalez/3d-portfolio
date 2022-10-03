@@ -28,7 +28,7 @@ You may also see any lint errors in the console.
 
 ## Modify the template to your tasting.
 
-There is no code required to configure the pages of the portfolio. 
+There is no codeing required to configure the pages of the portfolio. 
 All the settings that you will ever need to touch are set inside the 
 
 `src/configs.js`, `./constants/pageData.js`, and `src/theme.js`
