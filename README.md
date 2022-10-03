@@ -41,7 +41,7 @@ All the settings that you will ever need to touch are set inside the
 
 ## Video tutorial:
 
-comming sooon: I'll make a video explaining this settings more in detail 
+https://youtu.be/fC7e2ONfhUc
 
 ## Deploy to github pages
 
