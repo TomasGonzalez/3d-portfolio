@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { CSSTransitionGroup } from 'react-transition-group'; // ES6
-import { AiOutlineMenu } from 'react-icons/ai';
-import { useWindowSize } from 'rooks';
+import {
+  AiOutlineMenu,
+  AiFillCaretRight,
+  AiFillPauseCircle,
+} from 'react-icons/ai';
+import { useRaf, useWindowSize } from 'rooks';
 
 import theme from '~/src/theme';
 import NavModal from './NavModal';
@@ -46,11 +50,31 @@ const MenuButton = styled.button`
   }
 `;
 
+const PlayButton = styled.div`
+  color: ${(props) => props.theme.colors.primary};
+`;
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { innerWidth } = useWindowSize();
   const [windowWidth, setWindowWidth] = useState(innerWidth);
-  const { isNavVisible } = useStore((state) => state);
+  const [playAudio, setPlayingAudio] = useState(true);
+  const audio = useRef();
+  let userinteraction = 0;
+
+  useEffect(() => {
+    if (!audio.current) {
+      audio.current = new Audio('audio/music.mp3');
+      audio.current.loop = true;
+
+      document.addEventListener('click', () => {
+        if (userinteraction) return;
+        userinteraction++;
+        audio.current.play();
+        setPlayingAudio(!audio.current.paused);
+      });
+    }
+  }, []);
 
   useEffect(() => {
     setWindowWidth(innerWidth);
@@ -66,7 +90,23 @@ const NavBar = () => {
     >
       <NavModal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} />
       <MainContainer windowWidth={windowWidth}>
-        <div style={{ width: 75 }} />
+        <PlayButton
+          onClick={() => {
+            if (audio.current.paused) {
+              audio.current.play();
+            } else {
+              audio.current.pause();
+            }
+
+            setPlayingAudio(!audio.current.paused);
+          }}
+        >
+          {!playAudio ? (
+            <AiFillCaretRight color={theme.colors.primary} size={30} />
+          ) : (
+            <AiFillPauseCircle color={theme.colors.primary} size={30} />
+          )}
+        </PlayButton>
         <div>{navTitle}</div>
         <MenuButton onClick={() => setIsOpen(true)}>
           <AiOutlineMenu color={theme.colors.primary} size={30} />
