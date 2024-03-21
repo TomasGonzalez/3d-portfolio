@@ -10,6 +10,7 @@ import calculateCameraRotation from '../../utils/calcualteCameraRotation';
 //get the referance of the track and calculate position/rotation inside of the camera component
 
 //I forgot how this works, touch at your own risk. If anyone has a good way to implement smooth stop points in the track please let me know
+// Regarding the comment above, I did found a better way. Next time dont make the camera movement algorithmically just attach it to some vecor in the animation and animate the path in blender instead (Facepalm)
 
 const SLOWDOWN_FACTOR = 7; // the lower the slower it goes
 const STOP_POINTS = [0.114, 0.211, 0.3015, 0.412, 0.5143, 0.625]; // they have to be separated by one SMOOTH_AMOUNT unit for example if smooth amount is 0.1 and the first stop point is 0.1 the second o stop_point has to be > 0.2
