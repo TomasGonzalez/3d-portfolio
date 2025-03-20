@@ -25,7 +25,7 @@ export const EXPERIENCE = {
   items: [
     {
       url: 'websites-preview/optic-logo.png',
-      websiteURL: 'https://optic.id/',
+      websiteURL: 'https://www.stack.page/',
     },
     {
       url: 'websites-preview/good-dollar.jpeg',
